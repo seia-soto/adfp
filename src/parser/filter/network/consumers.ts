@@ -219,33 +219,6 @@ export function consumeNetworkFilterPatternAsUri(line: string, pos: number, end:
 	return [pos, line.slice(start, pos)] as const;
 }
 
-export function consumeNetworkFilterAsRemainingRegexp(line: string, pos: number, end: number) {
-	if (line.charCodeAt(end - 1) === ascii.slash) {
-		return [end, line.slice(pos)] as const;
-	}
-
-	const start = pos;
-
-	let code: number;
-	let lastCode = line.charCodeAt(pos - 1);
-
-	for (; pos < end; pos++) {
-		code = line.charCodeAt(pos);
-
-		if (code === ascii.escape) {
-			pos++;
-		} else if (code === ascii.dollar) {
-			if (lastCode === ascii.slash) {
-				return [pos, line.slice(start, pos)] as const;
-			}
-		}
-
-		lastCode = code;
-	}
-
-	return [start, undefined] as const;
-}
-
 function consumeNetworkFilterOptionKey(line: string, pos: number, end: number) {
 	const start = pos;
 

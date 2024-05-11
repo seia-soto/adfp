@@ -1,4 +1,5 @@
 import {
+	NetworkFilterParserError,
 	networkFilterParserErrorKinds,
 } from './parser/filter/network/errors.js';
 import {
@@ -7,6 +8,8 @@ import {
 } from './parser/filter/network/index.js';
 
 export {
-	networkFilterParserErrorKinds, parseNetworkFilter,
+	NetworkFilterParserError,
+	networkFilterParserErrorKinds,
+	parseNetworkFilter,
 	type NetworkFilter,
 };
