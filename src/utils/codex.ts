@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 export const ascii = {
 	exclamation: 33,
+	numero: 35, // #
 	dollar: 36,
 	percent: 37,
 	and: 38,
