@@ -1,3 +1,5 @@
+import {FilterParserError} from '../../errors.js';
+
 export const networkFilterParserErrorKinds = {
 	invalidPatternHostname: 'INVALID_PATTERN_HOSTNAME',
 	invalidPatternUrl: 'INVALID_PATTERN_URL',
@@ -5,7 +7,7 @@ export const networkFilterParserErrorKinds = {
 	invalidOption: 'INVALID_OPTION',
 } as const;
 
-export class NetworkFilterParserError extends Error {
+export class NetworkFilterParserError extends FilterParserError {
 	kind: string;
 
 	constructor(kind: (typeof networkFilterParserErrorKinds)[keyof typeof networkFilterParserErrorKinds], message: string) {

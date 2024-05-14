@@ -1,10 +1,14 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 export const ascii = {
+	space: 32,
 	exclamation: 33,
+	numero: 35,
 	dollar: 36,
 	percent: 37,
 	and: 38,
 
+	parenthesisOpen: 40,
+	parenthesisClose: 41,
 	asterisk: 42,
 	plus: 43,
 	comma: 44,
@@ -21,16 +25,16 @@ export const ascii = {
 	at: 64,
 	A: 65, // Alphabet start
 	Z: 90, // Alphabet end
-	bracketOpen: 91,
+	squareBracketOpen: 91,
 	escape: 92,
-	bracketClose: 93,
+	squareBracketClose: 93,
 	hat: 94,
 	underscore: 95,
 
 	a: 97, // Lowercase-alphabet start
 	z: 122, // Lowercase-alphabet end
-	parenthesisOpen: 123,
+	bracketOpen: 123,
 	pipe: 124,
-	parenthesisClose: 125,
+	bracketClose: 125,
 	tilde: 126,
 };
