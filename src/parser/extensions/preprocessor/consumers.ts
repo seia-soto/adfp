@@ -1,6 +1,9 @@
 import {ascii} from '../../../utils/codex.js';
 import {isAlphabet} from '../../../utils/patterns.js';
-import {PreprocessorParserError, preprocessorParserErrorKinds} from './errors.js';
+import {
+	PreprocessorParserError,
+	preprocessorParserErrorKinds,
+} from './errors.js';
 import {Component} from './index.js';
 
 export function consumePreprocessorValue(line: string, pos: number, end: number) {

@@ -1,12 +1,16 @@
 import {ascii} from '../../../utils/codex.js';
-import {FilterType} from '../../filter/type.js';
-import {ExtensionTypes} from '../types.js';
-import {consumePreprocessorOperator, consumePreprocessorValue} from './consumers.js';
-import {PreprocessorParserError, preprocessorParserErrorKinds} from './errors.js';
+import {FilterType} from '../../types.js';
+import {
+	consumePreprocessorOperator,
+	consumePreprocessorValue,
+} from './consumers.js';
+import {
+	PreprocessorParserError,
+	preprocessorParserErrorKinds,
+} from './errors.js';
 
 export type Preprocessor = {
-	type: FilterType.Comment;
-	extensionType: ExtensionTypes.Preprocessor;
+	type: FilterType.Preprocessor;
 	expression: string;
 };
 
@@ -27,8 +31,7 @@ export function parsePreprocessor(line: string): Preprocessor {
 	}
 
 	return {
-		type: FilterType.Comment,
-		extensionType: ExtensionTypes.Preprocessor,
+		type: FilterType.Preprocessor,
 		expression,
 	};
 }

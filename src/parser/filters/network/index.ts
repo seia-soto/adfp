@@ -1,5 +1,5 @@
 import {ascii} from '../../../utils/codex.js';
-import {FilterType} from '../type.js';
+import {FilterType} from '../../types.js';
 import {
 	consumeNetworkFilterException,
 	consumeNetworkFilterFooter,
@@ -9,7 +9,10 @@ import {
 	consumeNetworkFilterPatternAsEffectiveTld,
 	consumeNetworkFilterPatternAsUri,
 } from './consumers.js';
-import {NetworkFilterParserError, networkFilterParserErrorKinds} from './errors.js';
+import {
+	NetworkFilterParserError,
+	networkFilterParserErrorKinds,
+} from './errors.js';
 import {indexOfOptions} from './utils.js';
 
 export type NetworkFilter = {
